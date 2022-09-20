@@ -6,6 +6,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
+        String message = greetUser("Mosh", "Hami");
+
+
         final byte MONTHS_IN_YEAR = 12;
         final byte PERCENT = 100;
 
@@ -51,4 +55,12 @@ public class Main {
         System.out.print("Mortgage: " + mortgageFormatted);
 
     }
+
+//    public static void greetUser(String firstName, String lastName) {
+//        System.out.println("Hello " + firstName + " " + lastName);
+//    }
+
+    public static String greetUser(String firstName, String lastName) {
+    return "Hello " + firstName + " " + lastName;
+}
 }
