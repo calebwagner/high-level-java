@@ -1,13 +1,23 @@
 import java.text.NumberFormat;
 
 public class MortgageReport {
+    /**
+     * MortgageReport fields
+     */
     private final NumberFormat currency;
     private MortgageCalculator calculator;
 
+    /**
+     * MortgageReport constructor
+     */
     public MortgageReport(MortgageCalculator calculator) {
         this.calculator = calculator;
         currency = NumberFormat.getCurrencyInstance();
     }
+
+    /**
+     * MortgageReport methods
+     */
     public void printPaymentSchedule() {
         System.out.println();
         System.out.println("PAYMENT SCHEDULE");
