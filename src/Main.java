@@ -6,15 +6,18 @@ public class Main {
     final static byte PERCENT = 100;
     public static void main(String[] args) {
 
-        // encapsulation in practice
-        var employee = new Employee();
-        employee.setBaseSalary(50_000);
-        employee.setHourlyRate(20);
-        employee.calculateWage(10);
+        var browser = new Browser();
+//        browser.navigate();
 
-        var textBox1 = new TextBox();
-        textBox1.setText("Box 1");
-        System.out.println(textBox1.text);
+        // encapsulation in practice
+//        var employee = new Employee();
+//        employee.setBaseSalary(50_000);
+//        employee.setHourlyRate(20);
+//        employee.calculateWage(10);
+
+//        var textBox1 = new TextBox();
+//        textBox1.setText("Box 1");
+//        System.out.println(textBox1.text);
 
         int principle = (int) readNumber("Principle: ", 100, 1_000_000);
        float annualInterest = (float) readNumber("Annual Interest Rate: ", 1, 30);
