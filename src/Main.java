@@ -7,41 +7,28 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int principle = 0;
-        byte years = 0;
-        float annualInterest = 0;
-
-        Scanner scanner = new Scanner(System.in);
-
-        while (true) {
-            System.out.print("Principle: ");
-            principle = scanner.nextInt();
-            if (principle >= 1000 && principle <= 1_000_000)
-                break;
-            System.out.println("Enter a value between 1000 and 1,000,000");
-        }
-
-        while (true) {
-            System.out.print("Annual Interest Rate: ");
-            annualInterest = scanner.nextFloat();
-            if (principle >= 1 && principle <= 30)
-                break;
-            System.out.println("Enter a value between 1 and 30");
-        }
-
-        while (true) {
-            System.out.print("Period (Years): ");
-            years = scanner.nextByte();
-            if (years >= 1 && years <= 30)
-                break;
-            System.out.println("Enter a value between 1 and 30");
-        }
+        int principle = (int) readNumber("Principle: ", 100, 1_000_000);
+       float annualInterest = (float) readNumber("Annual Interest Rate: ", 1, 30);
+       byte years = (byte) readNumber("Period (Years): ", 1, 30);
 
         double mortgage = calculateMortgage(principle, annualInterest, years);
 
         String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
         System.out.print("Mortgage: " + mortgageFormatted);
 
+    }
+
+    public static double readNumber(String prompt, double min, double max) {
+        Scanner scanner = new Scanner(System.in);
+        double value;
+        while (true) {
+            System.out.print("Principle: ");
+            value = scanner.nextInt();
+            if (value >= min && value <= max)
+                break;
+            System.out.println("Enter a value between " + min + " and " + max);
+        }
+        return value;
     }
 
     public static double calculateMortgage(
