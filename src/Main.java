@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
 
-        var control = new TextBox();
-        control.enable();
-        System.out.println(control.isEnabled());
+        var textBox = new TextBox();
+        textBox.setText("Hello World");
+        System.out.println(textBox);
 
 //        int principle = (int) Console.readNumber("Principle: ", 100, 1_000_000);
 //       float annualInterest = (float) Console.readNumber("Annual Interest Rate: ", 1, 30);
