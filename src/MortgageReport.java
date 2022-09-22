@@ -7,11 +7,14 @@ public class MortgageReport {
     private final NumberFormat currency;
     private MortgageCalculator calculator;
 
+    private CarLoanCalculator carCalculator;
+
     /**
      * MortgageReport constructor
      */
-    public MortgageReport(MortgageCalculator calculator) {
+    public MortgageReport(MortgageCalculator calculator, CarLoanCalculator carCalculator) {
         this.calculator = calculator;
+        this.carCalculator = carCalculator;
         currency = NumberFormat.getCurrencyInstance();
     }
 
